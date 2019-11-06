@@ -1,0 +1,36 @@
+.setting-component {
+    .snackbar-content {
+        display: flex;
+        flex: 1;
+        padding: 0px 10px;
+        max-width: 720px;
+        font-size: 13px;
+        border: solid 1px #63b266;
+        align-content: center;
+    }
+
+    .content-block {
+        padding: 20px;
+        min-height: 528px;
+         width: 600px;
+        //  max-width: 720px;
+        top: 84px;
+        position: sticky;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        font-family: 'Arial-BoldMT';
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-bottom: 21px;
+    }
+
+    .title-right-button {
+        text-align: right;
+        margin-bottom: 21px;
+    }
+
+    .right-container {}
+}

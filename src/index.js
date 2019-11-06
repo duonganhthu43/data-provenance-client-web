@@ -1,12 +1,54 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { PersistGate } from 'redux-persist/integration/react'
+import { persistStore, persistReducer } from 'redux-persist'
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { createBrowserHistory } from 'history';
+import { routerMiddleware } from 'connected-react-router';
+import storage from 'redux-persist/lib/storage'
+import createRootReducer from './reducers';
+import createSagaMiddleware from 'redux-saga';
+import sagas from './sagas';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const sagaMiddleware = createSagaMiddleware();
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+let composeEnhancers = compose
+
+if (process.env.NODE_ENV === 'development') {
+  const composeWithDevToolsExtension =
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+  if (typeof composeWithDevToolsExtension === 'function') {
+    composeEnhancers = composeWithDevToolsExtension
+  }
+}
+const history = createBrowserHistory();
+
+const rootReducer = createRootReducer(history);
+const persistConfig = {
+  key: 'root',
+  storage,
+};const persistedReducer = persistReducer(persistConfig, rootReducer)
+const store = createStore(
+  persistedReducer,
+  composeEnhancers(
+    applyMiddleware(
+      sagaMiddleware,
+      routerMiddleware(history)
+    )
+  )
+);
+
+const persistor = persistStore(store);
+
+sagaMiddleware.run(sagas);
+
+ReactDOM.render(
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <App history={history}/>
+      </PersistGate>
+    </Provider>,
+  document.getElementById('root')
+);

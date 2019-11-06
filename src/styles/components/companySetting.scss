@@ -1,0 +1,32 @@
+.company-setting-section {
+    margin-bottom: 30;
+
+    .section-title {
+        font-family: Arial;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #2a3236;
+        text-transform: uppercase;
+        margin-bottom: 15px,
+    }
+
+    .company-row-content {
+        margin-bottom: 10px;
+
+        .input-label {
+            font-family: Arial;
+            font-size: 13px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #5e737d;
+            margin-bottom: 6px;
+        }
+    }
+}

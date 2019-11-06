@@ -1,0 +1,20 @@
+.menu-container {
+    padding: 9px;
+    width: 202px;
+    max-width: 202px;
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 84px;
+    &>ul {
+        li {
+            a {
+                display: flex;
+                width: 100%;
+                height: 46px;
+                text-decoration: none;
+                align-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.header-container {
+    flex-grow: 1;
+    width: 100%;
+    position: sticky;
+    top: '0px';
+    z-index: 7;
+    height: 50px;
+
+    &>.app-bar {
+        background-color: #ffffff;
+
+        &>.toolbar {
+            display: flex;
+            flex-direction: row;
+            padding-left: 0px;
+            padding-right: 0px;
+            min-height: 56px;
+
+            .logo {
+                height: 50px;
+                margin-right: 20px;
+            }
+        }
+    }
+}

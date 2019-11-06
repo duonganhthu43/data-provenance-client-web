@@ -1,0 +1,41 @@
+.image-picker-section {
+    .file-name-display-section {
+        background-color: #fff;
+        display: flex;
+        cursor: pointer;
+        border-radius: 3px;
+        border: solid 1px #b7c0c5;
+        background-color: #ffffff;
+
+        .image-name {
+            text-transform: none;
+            flex: 1;
+            font-size: 13px;
+            color: #38464c;
+        }
+    }
+    .drop-file-section {
+        padding-top: 17px;
+        padding-bottom: 17px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        border: dashed 1px #b7c0c5;
+        border-radius: 3px;
+
+        .choose-image-label {
+            flex: 1;
+            font-family: Arial;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            color: #2f7ae2;
+        }
+        .sub-label {
+            font-size: 10px;
+            color: #95a2a8;
+            text-align: center;
+            margin-top: 4px;
+        }
+    }
+}

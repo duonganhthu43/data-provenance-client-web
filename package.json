@@ -3,12 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "@loopmode/react-pretty-json": "^1.0.9",
+    "@material-ui/core": "^4.5.1",
+    "@material-ui/icons": "^3.0.1",
+    "axios": "^0.19.0",
+    "connected-react-router": "^6.3.1",
+    "crypto-es": "^1.1.1",
+    "file-saver": "^2.0.2",
+    "google-map-react": "^1.1.4",
+    "hasha": "^5.1.0",
+    "i18next": "^17.0.2",
+    "js-file-download": "^0.4.8",
+    "langs": "^2.0.0",
+    "material-ui-phone-number": "^1.4.0",
+    "material-ui-popup-state": "^1.4.1",
+    "moment": "^2.23.0",
+    "prop-types": "^15.6.2",
+    "query-string": "^6.5.0",
+    "react": "16.9.0",
+    "react-beautiful-dnd": "^11.0.5",
+    "react-color": "^2.17.0",
+    "react-credit-card-input": "^1.1.0",
+    "react-day-picker": "^7.2.4",
+    "react-dom": "16.8.6",
+    "react-dropzone": "^10.1.10",
+    "react-i18next": "^10.11.0",
+    "react-places-autocomplete": "^7.2.0",
+    "react-redux": "7.1.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.8",
+    "react-select": "^3.0.8",
+    "react-stripe-elements": "^2.0.1",
+    "react-swipeable-views": "^0.13.3",
+    "react-truncate": "^2.4.0",
+    "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
+    "redux-persist": "^5.10.0",
+    "redux-saga": "^1.0.1",
+    "stream-to-blob": "^2.0.0",
+    "uuid": "^3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3008 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,5 +64,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "terser": "^3.14.1"
   }
 }

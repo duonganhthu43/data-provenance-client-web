@@ -1,0 +1,34 @@
+.color-picker-section {
+    .swatch-display-section {
+        padding: 10px;
+        background: #fff;
+        display: flex;
+        cursor: pointer;
+        border-radius: 3px;
+        border: solid 1px #b7c0c5;
+        background-color: #ffffff;
+        .color {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            margin-right: 5px;
+        }
+        .color-code {
+            flex: 1;
+            font-size: 13px;
+            color: #38464c;
+            text-transform: uppercase;
+        }
+    }
+    .pop-over {
+        position: absolute;
+        z-index: 2;
+        .cover {
+            position: fixed;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+        }
+    }
+}

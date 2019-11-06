@@ -1,0 +1,39 @@
+.branding-section {
+    margin-bottom: 20px;
+    .section-title {
+        margin-bottom: 15px;
+        font-family: Arial;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #2a3236;
+        font-weight: bold
+    }
+
+    .input-label {
+        margin-bottom: 6px;
+        font-size: 13px;
+        color: #5e737d;
+        font-family: Arial;
+        flex: 1;
+    }
+
+    .input-sub-title {
+        font-family: Arial;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #95a2a8;
+        padding-left: 5px;
+    }
+    .button-remove-image {
+        padding: 0px;
+        text-align: right;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: none;
+        margin-bottom: 6px;
+    }
+}
